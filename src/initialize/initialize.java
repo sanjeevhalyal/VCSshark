@@ -21,9 +21,11 @@ public class initialize {
     private String branch;
 private String projectfolder;
 
-    public initialize(String rootpath, String projectfolder) {
+
+
+    public initialize(String rootpath, String projectfolder,String branch) {
         this.path = rootpath + "\\" + projectfolder;
-        this.branch = "Main";
+        this.branch = branch;
         this.projectfolder=projectfolder;
         System.out.println(path);
 

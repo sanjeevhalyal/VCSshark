@@ -22,6 +22,6 @@ class initializeTest {
 
         String path = "C:\\Users\\sanjeev halyal\\PhpstormProjects";
         String project="npp";
-        new initialize(path,project).init();
+        new initialize(path,project,"Main").init();
     }
 }

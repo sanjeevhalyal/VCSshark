@@ -4,6 +4,8 @@ package loadenv;
 import org.w3c.dom.*;
 import javax.xml.parsers.*;
 import java.io.File;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 
 
 public class loadenv {
@@ -22,7 +24,13 @@ public class loadenv {
      private void loadxml()
     {
         try {
-            File inputFile = new File("src\\.env");
+
+
+            Path path = FileSystems.getDefault().getPath(".env").toAbsolutePath();
+            System.out.println(path.toString());
+
+            File inputFile = new File(path.toString());
+            System.out.println(inputFile.getAbsolutePath());
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             doc = dBuilder.parse(inputFile);
