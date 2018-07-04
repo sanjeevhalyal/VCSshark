@@ -1,6 +1,7 @@
 # VCSshark
 
-features implemented in the tool:
+Features implemented in the tool:
+
 ·       Initialize version control for the project.
 ·       Pushing new changes to project.
 ·       Revert to previous version of code.
